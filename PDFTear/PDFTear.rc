@@ -1,0 +1,351 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PDFTear.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PDFTear.ico"
+IDI_ICON_PAYLOAD        ICON    DISCARDABLE     "res\\shellcode.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 PDFTear"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PDFTear 1.1 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2010 Cryin'",IDC_STATIC,40,25,152,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PDFTEAR_DIALOG DIALOGEX 0, 0, 471, 342
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PDFTear v1.1"
+MENU IDR_MENU_MAIN
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "文件解析",IDC_STATIC,3,44,462,293
+    CONTROL         "List1",IDC_LIST_VIEW,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,10,56,448,275
+    GROUPBOX        "选择文件",IDC_STATIC,3,4,462,36
+    EDITTEXT        IDC_EDIT_FILENAME,71,18,226,14,ES_AUTOHSCROLL | 
+                    ES_READONLY,WS_EX_ACCEPTFILES | WS_EX_STATICEDGE
+    PUSHBUTTON      "浏览",IDC_BUTTON_BROWSER,315,18,43,14
+    LTEXT           "Analyse File:",IDC_STATIC,13,19,53,8
+    PUSHBUTTON      "检测",IDC_BUTTON_DOWORK,371,17,43,14
+END
+
+IDD_DIALOG_PAYLOAD DIALOG DISCARDABLE  0, 0, 398, 269
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ShellCode辅助工具"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "反汇编及Shellcode机器码提取",IDC_STATIC,2,2,391,263
+    LTEXT           "选择文件:",IDC_STATIC,17,19,37,8
+    EDITTEXT        IDC_EDIT_PATH,63,16,170,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "浏览",IDC_BUTTON_BROWSER,244,15,37,14
+    PUSHBUTTON      "反汇编",IDC_BUTTON_DASM,297,15,37,14
+    PUSHBUTTON      "机器码",IDC_BUTTON_CODE,350,15,37,14
+    EDITTEXT        IDC_EDIT_INFO,8,50,378,209,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    LTEXT           "Address         Opcodes         Disassembly            ",
+                    IDC_STATIC,8,38,377,8,SS_SUNKEN | WS_DISABLED
+END
+
+IDD_DIALOG_DECODE DIALOG DISCARDABLE  0, 0, 358, 252
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "加密解密工具"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "文件操作",IDC_STATIC,3,4,351,34
+    LTEXT           "选择文件:",IDC_STATIC,15,20,37,8
+    EDITTEXT        IDC_EDIT_PATH,59,17,184,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "浏览",IDC_BUTTON_BROWSER,261,18,43,14
+    GROUPBOX        "Decoding",IDC_STATIC,3,41,351,153
+    EDITTEXT        IDC_EDIT_INFO,9,55,339,135,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    LTEXT           "0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F ",
+                    IDC_STATIC,49,46,265,8,WS_DISABLED
+    GROUPBOX        "加密方式",IDC_STATIC,3,195,351,53
+    CONTROL         "异或",IDC_RADIO_XOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,12,207,32,10
+    CONTROL         "递加异或",IDC_RADIO_ADDXOR,"Button",BS_AUTORADIOBUTTON,
+                    68,207,48,10
+    CONTROL         "递减异或",IDC_RADIO_DECXOR,"Button",BS_AUTORADIOBUTTON,
+                    124,207,48,10
+    CONTROL         "字节",IDC_RADIO_BYTE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,12,225,32,10
+    CONTROL         "字",IDC_RADIO_WORD,"Button",BS_AUTORADIOBUTTON,68,225,
+                    24,10
+    CONTROL         "双字",IDC_RADIO_DWORD,"Button",BS_AUTORADIOBUTTON,124,
+                    225,32,10
+    LTEXT           "操作数:",IDC_STATIC,187,210,29,8
+    EDITTEXT        IDC_EDIT_TARGET,223,207,47,14,ES_AUTOHSCROLL
+    LTEXT           "例:  0xC3 填入C3",IDC_STATIC,187,225,65,8
+    PUSHBUTTON      "执行",IDC_BUTTON_OK,297,205,50,14
+    PUSHBUTTON      "取消",IDC_BUTTON_BYE,297,227,50,14
+END
+
+IDD_DIALOG_JS DIALOG DISCARDABLE  0, 0, 402, 298
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "操作控制",IDC_STATIC,7,7,388,59
+    LTEXT           "起始位置:",IDC_STATIC,14,27,37,8
+    LTEXT           "结束位置:",IDC_STATIC,14,45,37,8
+    EDITTEXT        IDC_EDIT_START,58,25,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_END,58,43,57,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "查看JavaScript",IDC_BUTTON_DECODE,277,33,61,14
+    PUSHBUTTON      "压缩至文件",IDC_BUTTON_CODE,331,44,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    GROUPBOX        "数据显示",IDC_STATIC,7,70,388,221
+    EDITTEXT        IDC_EDIT_INFO,14,81,374,204,ES_MULTILINE | WS_VSCROLL
+    LTEXT           "示例: JS所在stream位置0x32B  32B",IDC_STATIC,125,28,153,
+                    8,WS_DISABLED
+    LTEXT           "示例: JS所在endstream位置0x66C  66C",IDC_STATIC,125,45,
+                    148,8,WS_DISABLED
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "http://www.erpai.org\0"
+            VALUE "FileDescription", "PDFTear 恶意PDF文件检测工具\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PDFTear\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PDFTear.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PDFTear 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PDFTEAR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 465
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 337
+    END
+
+    IDD_DIALOG_PAYLOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 393
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_DIALOG_DECODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 354
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_DIALOG_JS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 395
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 291
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open File...",               IDR_FILE_OPENF
+        MENUITEM "&Exit",                       IDR_FILE_EXIT
+    END
+    POPUP "&Payload"
+    BEGIN
+        MENUITEM "Payload &Tear",               IDR_PAYLOAD_TOOL
+    END
+    POPUP "&Decode"
+    BEGIN
+        MENUITEM "&XorTear",                    IDR_DECODE_XOR
+    END
+    POPUP "&JSView"
+    BEGIN
+        MENUITEM "JavaScript &View",            IDR_JSVIEW_TOOL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   IDR_HELP_ABOUT
+    END
+END
+
+IDR_MENU_FILE MENU DISCARDABLE 
+BEGIN
+    POPUP "DoWork"
+    BEGIN
+        MENUITEM "&JavaScript View",            ID_MENU_FILE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 PDFTear(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\PDFTear.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
