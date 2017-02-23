@@ -21,7 +21,7 @@ Author: [Cryin']
 
 ###Usage & Screenshot:
 
-![Selection](http://bbs.pediy.com/upload/attach/201012/371024_08tkr960jurstkk.jpg)<br>
+![](http://i1.piimg.com/567571/6e0e3f31f3a19d56.jpg)
 
 ###Link:
 
